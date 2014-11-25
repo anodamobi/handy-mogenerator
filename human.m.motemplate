@@ -1,0 +1,18 @@
+//
+//  <$managedObjectClassName$>.m
+//  CtrlDo
+//
+//  Created by Oksana Kovalchuk.
+//  Copyright (c) 2014 ANODA. All rights reserved.
+//
+
+#import "<$managedObjectClassName$>.h"
+
+@interface <$managedObjectClassName$> ()
+
+@end
+
+
+@implementation <$managedObjectClassName$>
+
+@end
