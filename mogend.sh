@@ -20,21 +20,18 @@ else
 fi
 
 DB_NAME=$(echo \"${curVer}\" | awk -F/ '{ print $(NF-1) }' | awk -F. '{ print $1 }')
-HUMAN_DIR="${curVer}/../../Entities"
-MACHINE_DIR="${curVer}/../../EntitiesMachine"
-INCLUDE_H="${curVer}/../../${DB_NAME}EntitiesHeader.h"
-TEMPLATE_DIR=$(dirname $0)
+
+BASEPATH=$( cd "${curVer}/../../" && pwd ) 
 
 (
 	set -x
 	mogenerator \
 		--model "$curVer" \
-		--machine-dir "$MACHINE_DIR/" \
-		--human-dir "$HUMAN_DIR/" \
-		--includeh "$INCLUDE_H" \
-		--template-var arc=true \
-		--template-var frc=true\
-		--template-var modules=true\
+		--machine-dir "${BASEPATH}/EntitiesMachine/" \
+		--human-dir "${BASEPATH}/Entities/" \
+		--includeh "${BASEPATH}/${DB_NAME}EntitiesHeader.h" \
+		--v2 \
+		--template-path "$(dirname $0)"
 )
 
 (

@@ -11,9 +11,9 @@
 # If no custom MO class is required, remove the "--base-class $baseClass" parameter
 # from mogenerator call baseClass=DOManagedObject
 
-HUMAN_DIR="${PROJECT_DIR}/${PROJECT}/Data/Entities"
-MACHINE_DIR="${PROJECT_DIR}/${PROJECT}/Data/EntitiesMachine"
-INCLUDE_H="${PROJECT_DIR}/${PROJECT}/Data/ModelIncludes.h"
+HUMAN_DIR="${PROJECT}/Data/Entities"
+MACHINE_DIR="${PROJECT}/Data/EntitiesMachine"
+INCLUDE_H="${PROJECT}/Data/ModelIncludes.h"
 
 (
 	set -x # for debugging
@@ -22,9 +22,8 @@ INCLUDE_H="${PROJECT_DIR}/${PROJECT}/Data/ModelIncludes.h"
 		--machine-dir "$MACHINE_DIR/" \
 		--human-dir "$HUMAN_DIR/" \
 		--includeh "$INCLUDE_H" \
-		--template-var arc=true \
-		--template-var frc=true\
-		--template-path .
+		--v2 \
+		--template-path "$(dirname $0)"
 )
 
 (
