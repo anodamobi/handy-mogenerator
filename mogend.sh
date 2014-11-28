@@ -7,13 +7,6 @@
 # Created on 5/17/14
 # Copyright (c) 2014 ANODA. All rights reserved.
 
-# Exit if XCode runtime configuration is Release
-if [ "${CONFIGURATION}" == "Release" ]
-then
-	echo "Won't run on Release"
-	exit 0
-fi
-
 # TODO: Change this to the name of custom ManagedObject base class (if applicable)
 # If no custom MO class is required, remove the "--base-class $baseClass" parameter
 # from mogenerator call baseClass=DOManagedObject
