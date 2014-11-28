@@ -7,6 +7,9 @@
 # Created on 5/17/14
 # Copyright (c) 2014 ANODA. All rights reserved.
 
+# OSX hack: add /usr/local/bin to the PATH env variable
+export PATH="/usr/local/bin:$PATH"
+
 # TODO: Change this to the name of custom ManagedObject base class (if applicable)
 # If no custom MO class is required, remove the "--base-class $baseClass" parameter
 # from mogenerator call baseClass=DOManagedObject
