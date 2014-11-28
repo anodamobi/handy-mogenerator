@@ -17,6 +17,7 @@ export PATH="/usr/local/bin:$PATH"
 HUMAN_DIR="${PROJECT}/Data/Entities"
 MACHINE_DIR="${PROJECT}/Data/EntitiesMachine"
 INCLUDE_H="${PROJECT}/Data/ModelIncludes.h"
+TEMPLATEPATH=$(dirname $0)
 
 (
 	set -x # for debugging
@@ -26,7 +27,7 @@ INCLUDE_H="${PROJECT}/Data/ModelIncludes.h"
 		--human-dir "$HUMAN_DIR/" \
 		--includeh "$INCLUDE_H" \
 		--v2 \
-		--template-path "$(dirname $0)"
+		--template-path "${TEMPLATEPATH}"
 )
 
 (

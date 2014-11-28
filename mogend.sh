@@ -25,7 +25,7 @@ fi
 DB_NAME=$(echo \"${curVer}\" | awk -F/ '{ print $(NF-1) }' | awk -F. '{ print $1 }')
 
 BASEPATH=$( cd "${curVer}/../../" && pwd ) 
-
+TEMPLATEPATH=$(dirname $0)
 (
 	set -x
 	mogenerator \
@@ -34,7 +34,7 @@ BASEPATH=$( cd "${curVer}/../../" && pwd )
 		--human-dir "${BASEPATH}/Entities/" \
 		--includeh "${BASEPATH}/${DB_NAME}EntitiesHeader.h" \
 		--v2 \
-		--template-path "$(dirname $0)"
+		--template-path "${TEMPLATEPATH}"
 )
 
 (
