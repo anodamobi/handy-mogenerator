@@ -14,9 +14,9 @@ export PATH="/usr/local/bin:$PATH"
 # If no custom MO class is required, remove the "--base-class $baseClass" parameter
 # from mogenerator call baseClass=DOManagedObject
 
-HUMAN_DIR="${PROJECT}/Data/Entities"
-MACHINE_DIR="${PROJECT}/Data/EntitiesMachine"
-INCLUDE_H="${PROJECT}/Data/ModelIncludes.h"
+HUMAN_DIR="${INPUT_FILE_DIR}/Entities"
+MACHINE_DIR="${INPUT_FILE_DIR}/EntitiesMachine"
+INCLUDE_H="${INPUT_FILE_DIR}/ModelIncludes.h"
 TEMPLATEPATH=$(dirname $0)
 
 (
