@@ -14,7 +14,7 @@ export PATH="/usr/local/bin:$PATH"
 # If no custom MO class is required, remove the "--base-class $baseClass" parameter
 # from mogenerator call baseClass=DOManagedObject
 
-if [ -f ${INPUT_FILE_PATH}/.xccurrentversion ]
+if [ -f "${INPUT_FILE_PATH}/.xccurrentversion" ]
 then
 	file=`/usr/libexec/PlistBuddy "${INPUT_FILE_PATH}/.xccurrentversion" -c 'print _XCCurrentVersionName'`
 	curVer="${INPUT_FILE_PATH}/$file"
